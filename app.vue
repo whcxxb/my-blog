@@ -16,15 +16,16 @@
         {{ item.name }}
       </div>
     </header>
-    <!-- <div class="max-md:hidden opacity-70 fixed top-0 left-0 right-0 w-screen h-screen"> -->
-    <div class="max-md:hidden transition-opacity opacity-60 fixed top-0 left-0 right-0 container mx-auto">
+    <div class="max-md:hidden transition-opacity opacity-60 fixed top-0 left-0 right-0 w-screen h-screen">
+      <!-- <div class="max-md:hidden transition-opacity opacity-60 fixed top-0 left-0 right-0 container mx-auto"> -->
       <video autoplay muted loop class="w-full max-h-full mx-auto" src="./assets/video/4.mp4 "></video>
     </div>
-    <NuxtPage></NuxtPage>
+    <NuxtPage class="container mx-auto mt-28 relative"></NuxtPage>
   </div>
 </template>
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
+const router = useRouter()
 const active = ref<number>(0)
 const menuList = reactive([
   {
@@ -38,6 +39,7 @@ const menuList = reactive([
 ])
 const selectChange = (index: number) => {
   active.value = index
+  router.push(menuList[index].path)
 }
 </script>
 <style></style>
