@@ -5,3 +5,4 @@
     <Article></Article>
   </div>
 </template>
+<script setup></script>
