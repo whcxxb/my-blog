@@ -4,7 +4,7 @@
     class="mb-5 hover:-translate-y-2 duration-500 shadow-lg cursor-pointer bg-white opacity-80 w-3/5 h-2/5 mx-auto py-3 px-3 rounded"
   >
     <div class="w-full h-64 mb-5 bg-[url('/img/cha.jpg')] bg-cover bg-center rounded"></div>
-    <div class="text-xl font-bold">想到什么说什么呢</div>
+    <div class="text-xl font-bold">{{ ArticleData.title }}</div>
     <div class="text-xs mb-3">⏱2023-2-1</div>
     <div class="text-base">
       相遇没法说话是为什么呢相遇没法说话是为什么呢相遇没法说话是为什么呢相遇没法说话是为什么呢相相遇没法说话是为什么呢相遇没法说话是为什么呢相遇没法说话是为什么呢相遇没法说话是为什么呢相遇没法说话是为什么呢...
@@ -13,8 +13,20 @@
 </template>
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+const props = defineProps({
+  id: {
+    type: Number,
+    required: true
+  },
+  ArticleData: {
+    type: Object,
+    required: true
+  }
+})
 const router = useRouter()
 const goDetail = () => {
-  router.push('/blog/1')
+  console.log(props.ArticleData)
+
+  router.push('/blog/' + props.id)
 }
 </script>
