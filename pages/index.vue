@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <Article v-for="(item, index) in articleList" :key="item.id" :id="index + 1" :ArticleData="item"></Article>
+    <Article v-for="(item, index) in articleList" :key="item._id" :id="item._id" :ArticleData="item"> </Article>
   </div>
 </template>
 <script setup>

@@ -7,9 +7,14 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
+<script setup>
 import { useRouter } from 'vue-router'
 const router = useRouter()
+const id = router.currentRoute.value.params.id
+const { data } = await $fetch(`http://localhost:3100/api/articleDetail/${id}`, {
+  method: 'GET'
+})
+console.log(data)
 const title = '想到什么说什么呢'
 const createTime = '⏱2023-2-1'
 const doc =

@@ -25,8 +25,6 @@ const props = defineProps({
 })
 const router = useRouter()
 const goDetail = () => {
-  console.log(props.ArticleData)
-
   router.push('/blog/' + props.id)
 }
 </script>
