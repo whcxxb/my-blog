@@ -1,6 +1,6 @@
 <template>
   <div class="bg-zinc-100 w-screen h-screen relative overflow-auto">
-    <title>小白的小小窝</title>
+    <!-- <title>小白的小小窝</title> -->
     <!-- <header
       class="h-20 flex center z-10 items-center text-xl font-semibold bg-white w-full fixed top-0 left-0 right-0 backdrop-blur-md bg-white/30"
     >
@@ -16,22 +16,30 @@
     <nav
       class="fixed top-0 left-0 right-0 z-10 flex items-center justify-between flex-wrap bg-white backdrop-blur-md bg-white/30 p-6"
     >
-      <div class="flex items-center flex-shrink-0 mr-6">
+      <div class="flex items-center flex-shrink-0 mr-6 cursor-pointer">
         <span class="font-semibold text-xl tracking-tight">保持理智</span>
       </div>
       <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded border-teal-400 hover:text-white hover:border-white">
+        <button
+          @click="isOpen = !isOpen"
+          class="flex items-center px-3 py-2 border rounded hover:text-pink-400 hover:text-pink-40"
+        >
           <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
       </div>
-      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow">
-          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-500">关于</NuxtLink>
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"> 随记 </a>
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white"> 音乐 </a>
+      <div
+        :style="{ display: isOpen ? 'block' : 'none' }"
+        class="fade-in-top max-lg:hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+      >
+        <div class="text-base lg:flex-grow">
+          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-400">关于</NuxtLink>
+          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-400">随记</NuxtLink>
+          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 hover:text-pink-400">音乐</NuxtLink>
+          <!-- <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"> 随记 </a>
+          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white"> 音乐 </a> -->
         </div>
         <div>
           <!-- <a
@@ -47,10 +55,19 @@
       <!-- <video autoplay muted loop class="w-full max-h-full mx-auto" src="./assets/video/4.mp4 "></video> -->
     </div>
     <NuxtPage class="container mx-auto mt-28 relative"></NuxtPage>
+    <footer class="bg-zinc-100 text-black py-8 border-t-2 z-20 relative">
+      <div class="container mx-auto flex justify-center">
+        <p class="text-center mr-3">Copyright © {{ new Date().getFullYear() }} My Blog</p>
+        <p class="text-center hover:text-pink-400">
+          <NuxtLink to="https://github.com" target="_blank">GitHub</NuxtLink>
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 <script setup lang="ts">
-// import { ref, reactive } from 'vue'
+import { ref, reactive } from 'vue'
+const isOpen = ref<boolean>(false)
 // const router = useRouter()
 // const active = ref<number>(0)
 // const menuList = reactive([
