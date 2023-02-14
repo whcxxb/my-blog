@@ -55,7 +55,7 @@
       <!-- <video autoplay muted loop class="w-full max-h-full mx-auto" src="./assets/video/4.mp4 "></video> -->
     </div>
     <NuxtPage class="container mx-auto mt-28 relative"></NuxtPage>
-    <footer class="bg-zinc-100 text-black py-8 border-t-2 z-20 relative">
+    <footer class="bg-zinc-100 text-black py-8 border-t-2 z-20 absolute left-0 bottom-0 right-0">
       <div class="container mx-auto flex justify-center">
         <p class="text-center mr-3">Copyright © {{ new Date().getFullYear() }} My Blog</p>
         <p class="text-center hover:text-pink-400">
@@ -67,7 +67,7 @@
 </template>
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
-const isOpen = ref<boolean>(false)
+const isOpen = ref<boolean>(true)
 // const router = useRouter()
 // const active = ref<number>(0)
 // const menuList = reactive([
