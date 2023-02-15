@@ -3,7 +3,7 @@
     <div class="w-3/4 mx-auto">
       <div class="mb-2 text-3xl font-bold">{{ title }}</div>
       <div class="text-sm text-slate-600 mb-8">{{ createTime }}</div>
-      <md-editor previewTheme="arknights" v-model="data.content" preview-only />
+      <md-editor previewTheme="default" v-model="data.content" preview-only />
     </div>
   </div>
 </template>
