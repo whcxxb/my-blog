@@ -15,7 +15,7 @@
 import { useRouter } from 'vue-router'
 const props = defineProps({
   id: {
-    type: Number,
+    type: String,
     required: true
   },
   ArticleData: {
