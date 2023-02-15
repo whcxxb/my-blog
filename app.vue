@@ -35,9 +35,9 @@
         class="fade-in-top max-lg:hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto"
       >
         <div class="text-base lg:flex-grow">
-          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-400">关于</NuxtLink>
-          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-400">随记</NuxtLink>
-          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 hover:text-pink-400">音乐</NuxtLink>
+          <NuxtLink to="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-400">随记</NuxtLink>
+          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-400">音乐</NuxtLink>
+          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 hover:text-pink-400">关于</NuxtLink>
           <!-- <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"> 随记 </a>
           <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white"> 音乐 </a> -->
         </div>
@@ -50,12 +50,12 @@
         </div>
       </div>
     </nav>
-    <div class="max-md:hidden transition-opacity opacity-60 fixed top-0 left-0 right-0 w-screen h-screen">
+    <div class="-z-50 max-md:hidden transition-opacity opacity-60 fixed top-0 left-0 right-0 w-screen h-screen">
       <!-- <div class="max-md:hidden transition-opacity opacity-60 fixed top-0 left-0 right-0 container mx-auto"> -->
       <!-- <video autoplay muted loop class="w-full max-h-full mx-auto" src="./assets/video/4.mp4 "></video> -->
     </div>
     <NuxtPage class="container mx-auto mt-28 relative"></NuxtPage>
-    <footer class="bg-zinc-100 text-black py-8 border-t-2 z-20 absolute left-0 bottom-0 right-0">
+    <footer class="bg-zinc-100 text-black py-8 border-t-2 z-20">
       <div class="container mx-auto flex justify-center">
         <p class="text-center mr-3">Copyright © {{ new Date().getFullYear() }} My Blog</p>
         <p class="text-center hover:text-pink-400">
