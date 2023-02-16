@@ -1,10 +1,8 @@
 <template>
   <div>
-    <div class="w-3/4 mx-auto">
-      <div class="mb-2 text-3xl font-bold">{{ title }}</div>
-      <div class="text-sm text-slate-600 mb-8">{{ createTime }}</div>
-      <md-editor previewTheme="default" v-model="data.content" preview-only />
-    </div>
+    <div class="mb-2 text-3xl font-bold">{{ title }}</div>
+    <div class="text-sm text-slate-600 mb-8">{{ createTime }}</div>
+    <md-editor previewTheme="default" v-model="data.content" preview-only />
   </div>
 </template>
 <script setup>
@@ -25,9 +23,12 @@ const createTime = data.createTime ? new Date(data.createTime).toLocaleString() 
 <style lang="scss">
 .md-editor {
   --md-bk-color: none !important;
-  // 使用父级的字体
   font-family: inherit !important;
   img {
+    max-width: 60%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
     opacity: 1;
     transition: opacity 0.3s ease;
     cursor: pointer;
