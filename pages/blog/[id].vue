@@ -10,7 +10,7 @@ import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 import MdEditor from 'md-editor-v3'
 import 'md-editor-v3/lib/style.css'
-const text = ref('# 测试')
+// const text = ref('# 测试')
 const router = useRouter()
 const id = router.currentRoute.value.params.id
 const { data } = await $fetch(`http://localhost:3100/api/articleDetail/${id}`, {
