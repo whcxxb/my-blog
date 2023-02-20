@@ -13,19 +13,30 @@
       <div class="flex items-center flex-shrink-0 mr-6 cursor-pointer">
         <NuxtLink to="/" class="font-semibold text-xl tracking-tight">保持理智</NuxtLink>
       </div>
-      <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded hover:text-pink-500 hover:text-pink-40">
+      <!-- <div class="block lg:hidden">
+        <button
+          class="flex items-center px-3 py-2 border rounded hover:text-pink-500 hover:text-pink-40"
+        >
           <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
-      </div>
-      <div class="max-lg:hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      </div> -->
+      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div class="text-base lg:flex-grow">
-          <NuxtLink to="/blog" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-500">随记</NuxtLink>
-          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-500">音乐</NuxtLink>
-          <NuxtLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 hover:text-pink-500">关于</NuxtLink>
+          <NuxtLink
+            to="/blog"
+            class="first-letter: mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-500"
+          >
+            随记
+          </NuxtLink>
+          <NuxtLink to="/about" class="mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-pink-500">
+            音乐
+          </NuxtLink>
+          <NuxtLink to="/about" class="mt-4 lg:inline-block lg:mt-0 hover:text-pink-500">
+            关于
+          </NuxtLink>
         </div>
         <div>
           <!-- <a
@@ -36,7 +47,7 @@
         </div>
       </div>
     </nav>
-    <NuxtPage class="mt-20 blog-container container mx-auto relative"></NuxtPage>
+    <NuxtPage class="mt-20 blog-container container mx-auto relative px-3 pt-5"></NuxtPage>
     <footer class="text-black h-16 z-20 relative flex items-center">
       <div class="container mx-auto flex justify-center">
         <p class="text-center mr-3">
@@ -51,8 +62,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
-const isOpen = ref<boolean>(true)
+import { ref, reactive } from "vue";
+const isOpen = ref<boolean>(true);
 </script>
 <style lang="scss">
 .blog-container {

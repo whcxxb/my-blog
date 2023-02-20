@@ -6,19 +6,19 @@
   </div>
 </template>
 <script setup>
-import { useRouter } from 'vue-router'
-import { ref } from 'vue'
-import MdEditor from 'md-editor-v3'
-import 'md-editor-v3/lib/style.css'
+import { useRouter } from "vue-router";
+import { ref } from "vue";
+import MdEditor from "md-editor-v3";
+import "md-editor-v3/lib/style.css";
 // const text = ref('# 测试')
-const router = useRouter()
-const id = router.currentRoute.value.params.id
+const router = useRouter();
+const id = router.currentRoute.value.params.id;
 const { data } = await $fetch(`http://localhost:3100/api/articleDetail/${id}`, {
-  method: 'GET'
-})
+  method: "GET",
+});
 // const entryHTML = $renderMarkdown(data.content)
-const title = data.title
-const createTime = data.createTime ? new Date(data.createTime).toLocaleString() : ''
+const title = data.title;
+const createTime = data.createTime ? new Date(data.createTime).toLocaleString() : "";
 </script>
 <style lang="scss">
 .md-editor {
