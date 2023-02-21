@@ -4,7 +4,7 @@
     <div
       class="blog-title w-full z-30 font-semibold text-black blog-title text-center text-4xl flex flex-col items-center absolute left-2/4 top-2/4"
     >
-      <img src="favicon.ico" alt="" class="w-32 mb-3 rounded-full" />
+      <img src="/favicon.ico" alt="" class="w-32 mb-3 rounded-full" />
       <div>2023继续</div>
       <div>保持理智,相信未来</div>
     </div>

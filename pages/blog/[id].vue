@@ -13,7 +13,7 @@ import "md-editor-v3/lib/style.css";
 // const text = ref('# 测试')
 const router = useRouter();
 const id = router.currentRoute.value.params.id;
-const { data } = await $fetch(`http://localhost:3100/api/articleDetail/${id}`, {
+const { data } = await $fetch(`http://101.42.17.104:3100/api/articleDetail/${id}`, {
   method: "GET",
 });
 // const entryHTML = $renderMarkdown(data.content)

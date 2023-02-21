@@ -5,7 +5,7 @@
 </template>
 <script setup>
 import { reactive } from "vue";
-const { data } = await $fetch("http://localhost:3100/api/articleList", {
+const { data } = await $fetch("http://101.42.17.104:3100/api/articleList", {
   method: "GET",
 });
 const articleList = reactive(data.list);
