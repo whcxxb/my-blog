@@ -18,5 +18,4 @@ import article from "@/server/api/article";
 // const articleList = reactive([]);
 const { data } = await article();
 const articleList = reactive(data.list);
-console.log("@@@", data);
 </script>
