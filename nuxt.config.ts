@@ -1,13 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  typescript: {
-    shim: false
+  runtimeConfig: {
+    public: {
+      baseURL: "http://101.42.17.104:3100",
+    },
   },
-  css: ['~/assets/css/main.css'],
+  typescript: {
+    shim: false,
+  },
+  css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {}
-    }
-  }
-})
+      autoprefixer: {},
+    },
+  },
+});
