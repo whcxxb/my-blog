@@ -10,12 +10,14 @@ import { useRouter } from "vue-router";
 import { ref } from "vue";
 import MdEditor from "md-editor-v3";
 import "md-editor-v3/lib/style.css";
+import detail from "@/server/api/detail";
 // const text = ref('# 测试')
 const router = useRouter();
 const id = router.currentRoute.value.params.id;
-const { data } = await $fetch(`/api/articleDetail/${id}`, {
-  method: "GET",
-});
+// const { data } = await $fetch(`/api/articleDetail/${id}`, {
+//   method: "GET",
+// });
+const { data } = await detail(id);
 // const entryHTML = $renderMarkdown(data.content)
 const title = data.title;
 const createTime = data.createTime ? new Date(data.createTime).toLocaleString() : "";

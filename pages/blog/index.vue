@@ -10,10 +10,13 @@
 </template>
 <script setup>
 import { reactive } from "vue";
-// defineEventHandler
-//  defineEventHandler("fetch", async("/api/articleList"));
-const { data } = await $fetch("/api/articleList", {
-  method: "GET",
-});
+import article from "@/server/api/article";
+// const { data } = await $fetch("/api/articleList", {
+//   method: "GET",
+// });
+// const articleList = reactive(data.list);
+// const articleList = reactive([]);
+const { data } = await article();
 const articleList = reactive(data.list);
+console.log("@@@", data);
 </script>
