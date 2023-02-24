@@ -2,21 +2,16 @@
   <div>
     <div class="mb-2 text-3xl font-bold">{{ title }}</div>
     <div class="text-sm text-slate-600 mb-8">{{ createTime }}</div>
-    <md-editor previewTheme="default" v-model="data.content" preview-only />
+    <div>在思考中</div>
   </div>
 </template>
 <script setup>
 import { useRouter } from "vue-router";
 import { ref } from "vue";
-import MdEditor from "md-editor-v3";
-import "md-editor-v3/lib/style.css";
 import detail from "@/server/api/detail";
-// const text = ref('# 测试')
+ 
 const router = useRouter();
 const id = router.currentRoute.value.params.id;
-// const { data } = await $fetch(`/api/articleDetail/${id}`, {
-//   method: "GET",
-// });
 const { data } = await detail(id);
 // const entryHTML = $renderMarkdown(data.content)
 const title = data.title;

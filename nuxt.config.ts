@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      baseURL: "https://101.42.17.104:3100",
+      baseURL: "http://101.42.17.104:3100",
     },
   },
   typescript: {
